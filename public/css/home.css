@@ -1,0 +1,19 @@
+.container {
+  text-align: center;
+}
+
+.container h1 {
+  font-style: italic;
+}
+
+.listing-highlight {
+  border: 1px solid gray;
+  margin: 20px;
+  transition: box-shadow 0.15s;
+  padding: .6em;
+}
+
+.listing-highlight:hover {
+  box-shadow: 5px 5px 4px rgba(13, 17, 23, .3);
+  cursor: pointer;
+}

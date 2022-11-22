@@ -18,7 +18,8 @@ router.get('/', (req, res) => {
 		}
 
 		const data = JSON.parse(output);
-		res.json(data);
+
+		res.render('home', { listings: data });
 	});
 });
 

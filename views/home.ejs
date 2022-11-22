@@ -1,0 +1,30 @@
+<%- include('./partials/header'); -%>
+
+<div class="container">
+  <h1>Internship Listings</h1>
+  <div class="row justify-content-center">
+
+		<% if (listings != null) { %>
+
+			<!-- loop through array of objects (internship listings) and render the content-->
+			<% listings.forEach(element => { %>
+
+				<div class="col-lg-3 col-md-4 listing-highlight">
+					<h2><%= element.title.rendered %></h2>
+					<%= element.yoast_head_json.description %>...
+					<a href="<%= element.link %>" target="_blank">Findout More</a>
+				</div>
+
+			<% }) %>
+
+		<% } else { %>
+
+			<div class="error-container">
+				<h1>Site is under maintence.  We will be back soon!</h1>
+			</div>
+
+		<% } %>
+  </div>
+</div>
+
+<%- include('./partials/footer'); -%>
