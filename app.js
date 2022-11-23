@@ -9,8 +9,10 @@ app.set('view engine', 'ejs');
 app.use(express.static('public'));
 
 /// import routes ///
+const about = require('./routes/about');
 const listings = require('./routes/listings');
 
+app.use('/about', about);
 app.use('/', listings);
 
 /// setup sever to listen on specific port ///
