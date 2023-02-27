@@ -1,5 +1,5 @@
 /// import modules ///
-const express = require('express');
+import express from 'express';
 
 /// setup an express app ///
 const app = express();
@@ -9,8 +9,8 @@ app.set('view engine', 'ejs');
 app.use(express.static('public'));
 
 /// import routes ///
-const about = require('./routes/about');
-const listings = require('./routes/listings');
+import about from './routes/about.js';
+import listings from './routes/listings.js';
 
 app.use('/about', about);
 app.use('/', listings);
